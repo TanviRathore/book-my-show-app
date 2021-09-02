@@ -5,13 +5,20 @@ import DefaultLayout from "../layouts/Default.Layout";
 const DefaultHOC = ({component, ...rest}) => {
     return (
         <>
-            <Route {...rest} component={(props) => (
-                <DefaultLayout>
-                    <component props/>
-                </DefaultLayout>
-            )}/>
+            <Route {...rest} component={(props) => (                     
+                <DefaultLayout>                                                       
+                    <component props/>                                               
+                </DefaultLayout>                                                         
+            )}/>                                                                         
         </>
     );
 };
 
 export default DefaultHOC;
+
+
+// const rest = {
+//     path: "/",
+//     exact,
+//     other other params,
+// }
