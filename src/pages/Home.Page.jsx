@@ -123,7 +123,7 @@ function HomePage() {
         <>
             <HeroCarousel />
 
-           <div className="bg-darkBackground-50 container w-full">
+           <div className="bg-darkBackground-50  w-full">
             <div className="container mx-auto px-4 md:px-12 my-8">
                     <PosterSlider 
                         title="Recommended Movies"
