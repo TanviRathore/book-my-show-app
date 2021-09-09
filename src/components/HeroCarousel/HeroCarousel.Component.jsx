@@ -42,11 +42,11 @@ const HeroCarousel = () => {
             <div className=" lg:hidden">
                 <HeroSlider {...settings}>
                     {images.map((image) => (
-                        <div className="w-full h-55 md:h-80 py-3" >
+                        <div className="w-full h-56 md:h-80 py-3" >
                             <img
                                 src={image}
                                 alt="Carousel Banner"
-                                className="w-full h-full rounded-md object-center"
+                                className="w-full h-full rounded-md object-center "
                             />
                         </div>
                     ))}
