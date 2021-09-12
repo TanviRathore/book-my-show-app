@@ -26,11 +26,13 @@ const MoviePage = () => {
 
   useEffect(() => {
     const requestRecommendedMovies = async () => {
-        const getRecommendedMovies = await axios.get( `/movie/${id}/recommendations`);
-        setRecommended(getRecommendedMovies.data.results);
+      const getRecommendedMovies = await axios.get(
+        `/movie/${id}/recommendations`
+      );
+      setRecommended(getRecommendedMovies.data.results);
     };
     requestRecommendedMovies();
-}, [id]);
+  }, [id]);
 
   useEffect(() => {
     const requestSimilarMovies = async () => {
@@ -59,7 +61,7 @@ const MoviePage = () => {
       {
         breakpoint: 600,
         settings: {
-          slidesToShow: 5,
+          slidesToShow: 3,
           slidesToScroll: 2,
           initialSlide: 2,
         },
@@ -125,7 +127,7 @@ const MoviePage = () => {
             Applicable Offers
           </h2>
           <div className="flex flex-col gap-2 items-start lg:flex-row">
-            <div className="border-yellow-400 border-dashed rounded-md items-start gap-2 bg-yellow-100 p-3">
+            <div className="flex border-yellow-400 border-dashed border-2 rounded-md items-start gap-2 bg-yellow-100 p-3">
               <div className="w-8 h-8">
                 <FaCcVisa className="w-full h-full" />
               </div>
@@ -139,7 +141,7 @@ const MoviePage = () => {
                 </p>
               </div>
             </div>
-            <div className="flex item-start gap-2 bg-yellow-100 p-3 border-ywllow-400 border-dashed border-2 rounded-md">
+            <div className="flex item-start gap-2 bg-yellow-100 p-3 border-yellow-400 border-dashed border-2 rounded-md">
               <div className="w-8 h-8">
                 <FaCcApplePay className="w-full h-full" />
               </div>
@@ -177,7 +179,7 @@ const MoviePage = () => {
           <hr />
         </div>
 
-        <div className="my-8">
+        <div className="my-8 px-3">
           <PosterSlider
             config={settings}
             title="Recommended Movies"

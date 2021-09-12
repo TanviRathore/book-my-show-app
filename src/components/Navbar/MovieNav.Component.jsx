@@ -1,7 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
 import { BiChevronDown, BiChevronLeft, BiMenu, BiSearch, BiShareAlt } from "react-icons/bi";
+import { MovieContext } from "../../context/Movie.Context";
 
 function NavSm() {
+
+    const {movie} = useContext(MovieContext);
+
     return (
         <>
             <div className="flex justify-between items-center text-gray-700">
@@ -9,7 +13,7 @@ function NavSm() {
                     <div className="w-6 h-6">
                         <BiChevronLeft className="w-full h-full" />
                     </div>
-                    <h3>Fast and Furious 9</h3>
+                    <h3>{movie.original_title}</h3>
                 </div>
                 <div className="w-6 h-6">
                     <BiShareAlt className="w-full h-full" />

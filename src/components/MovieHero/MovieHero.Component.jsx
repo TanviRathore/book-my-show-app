@@ -4,14 +4,14 @@ import MovieInfo from "./MovieInfo.Component";
 
 const MovieHero = () => {
   const { movie } = useContext(MovieContext);
-  const genres = movie.genres?.map(({ name }) => name).join(", ");
+  const genres = movie.genres?.map(({ name }) => name).join(", ");  //null collision operation
 
   return (
     <>
       <div>
         <div className="lg:hidden w-full">
           <img
-            src={`https://image.tmdb.org/t/p/original${movie.poster_path}`}
+            src={`https://image.tmdb.org/t/p/original${movie.backdrop_path}`}
             className="m-4 rounded"
             alt="cover poster"
             style={{
@@ -20,7 +20,7 @@ const MovieHero = () => {
           />
         </div>
         <div className="flex flex-col gap-3 lg:hidden">
-          <div className="text-black flex flex-col gap-2 md:px-4">
+          <div className="text-black flex flex-col gap-2 md:px-4 px-4">
             <h4>4k ratings</h4>
             <h4>English, Hindi, Kannada, Tamil, Telugu</h4>
             <h4>

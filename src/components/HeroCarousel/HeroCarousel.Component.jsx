@@ -20,12 +20,12 @@ const HeroCarousel = () => {
 
     const settings = {
         className: "center",
-        dots: true,
         arrows: true,
         slidesToShow: 1,
         infinite: true,
         speed: 500,
         slidesToScroll: 1,
+        initialSlide: 2,
         nextArrow: <NextArrow />,
         prevArrow: <PrevArrow />,
     };
