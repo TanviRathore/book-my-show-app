@@ -26,9 +26,7 @@ const MoviePage = () => {
 
   useEffect(() => {
     const requestRecommendedMovies = async () => {
-      const getRecommendedMovies = await axios.get(
-        `/movie/${id}/recommendations`
-      );
+      const getRecommendedMovies = await axios.get(`/movie/${id}/recommendations`);
       setRecommended(getRecommendedMovies.data.results);
     };
     requestRecommendedMovies();
@@ -44,10 +42,11 @@ const MoviePage = () => {
   }, [id]);
 
   const settingsCast = {
+    arrows: true,
     infinite: false,
-    speed: 500,
     slidesToShow: 6,
     slidesToScroll: 4,
+    autoplay: false,
     initialSlide: 0,
     responsive: [
       {
@@ -55,7 +54,6 @@ const MoviePage = () => {
         settings: {
           slidesToShow: 4,
           slidesToScroll: 3,
-          infinite: true,
         },
       },
       {
@@ -77,10 +75,11 @@ const MoviePage = () => {
   };
 
   const settings = {
+    arrows: true,
     infinite: false,
-    speed: 500,
-    slidesToShow: 4,
+    slidesToShow: 5,
     slidesToScroll: 4,
+    autoplay: false,
     initialSlide: 0,
     responsive: [
       {
@@ -88,13 +87,12 @@ const MoviePage = () => {
         settings: {
           slidesToShow: 3,
           slidesToScroll: 3,
-          infinite: true,
         },
       },
       {
         breakpoint: 600,
         settings: {
-          slidesToShow: 2,
+          slidesToShow: 3,
           slidesToScroll: 2,
           initialSlide: 2,
         },
