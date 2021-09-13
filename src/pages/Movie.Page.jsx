@@ -52,23 +52,28 @@ const MoviePage = () => {
       {
         breakpoint: 1024,
         settings: {
-          slidesToShow: 4,
+          slidesToShow: 5,
           slidesToScroll: 3,
+          initialSlide: 0,
+          infinite: true,
         },
       },
       {
         breakpoint: 600,
         settings: {
-          slidesToShow: 3,
+          slidesToShow: 5,
           slidesToScroll: 2,
-          initialSlide: 2,
+          initialSlide: 0,
+          infinite: false,
         },
       },
       {
         breakpoint: 480,
         settings: {
-          slidesToShow: 2,
+          slidesToShow: 3,
           slidesToScroll: 1,
+          initialSlide: 0,
+          infinite: true,
         },
       },
     ],
@@ -87,6 +92,8 @@ const MoviePage = () => {
         settings: {
           slidesToShow: 3,
           slidesToScroll: 3,
+          initialSlide: 0,
+          infinite: true,
         },
       },
       {
@@ -94,7 +101,8 @@ const MoviePage = () => {
         settings: {
           slidesToShow: 3,
           slidesToScroll: 2,
-          initialSlide: 2,
+          initialSlide: 0,
+          infinite: true,
         },
       },
       {
@@ -102,6 +110,8 @@ const MoviePage = () => {
         settings: {
           slidesToShow: 3,
           slidesToScroll: 1,
+          initialSlide: 0,
+          infinite: true,
         },
       },
     ],
@@ -112,7 +122,7 @@ const MoviePage = () => {
       <MovieHero />
       <div className="container my-12 px-4 lg:ml-20 lg:w-2/3">
         <div className="flex flex-col gap-3 items-start">
-          <h3 className="text-2xl text-gray-800 font-bold">About the Movie</h3>
+          <h3 className="text-xl md:text-2xl text-gray-800 font-bold">About the Movie</h3>
           <p>{movie.overview}</p>
         </div>
 
@@ -121,7 +131,7 @@ const MoviePage = () => {
         </div>
 
         <div className="my-8">
-          <h2 className="text-gray-800 font-bold text-2xl mb-3">
+          <h2 className="text-gray-800 font-bold md:text-2xl mb-3 text-xl ">
             Applicable Offers
           </h2>
           <div className="flex flex-col gap-2 items-start lg:flex-row">
@@ -130,7 +140,7 @@ const MoviePage = () => {
                 <FaCcVisa className="w-full h-full" />
               </div>
               <div className="flex flex-col item-start">
-                <h3 className="text-gray-700 text-xl font-bold">
+                <h3 className="text-gray-700 text-lg font-bold">
                   Visa Stream Offer
                 </h3>
                 <p className="text-gray-600">
@@ -144,7 +154,7 @@ const MoviePage = () => {
                 <FaCcApplePay className="w-full h-full" />
               </div>
               <div className="flex flex-col item-start">
-                <h3 className="text-gray-700 text-xl font-bold">Filmy Pass</h3>
+                <h3 className="text-gray-700 text-lg font-bold ">Filmy Pass</h3>
                 <p className="text-gray-600">
                   Get 50% off up to INR 150 on all RuPay card* on BookMyShow
                   Stream.
@@ -159,7 +169,7 @@ const MoviePage = () => {
         </div>
 
         <div className="my-8">
-          <h3 className="text-2xl font-bold mb-4 text-gray-800">
+          <h3 className="md:text-2xl text-lg font-bold mb-4 text-gray-800">
             Cast and Crew
           </h3>
           <Slider {...settingsCast}>

@@ -28,6 +28,7 @@ const PosterSlider = (props) => {
           slidesToShow: 3,
           slidesToScroll: 2,
           initialSlide: 2,
+          infinite: true,
         },
       },
       {
@@ -35,6 +36,7 @@ const PosterSlider = (props) => {
         settings: {
           slidesToShow: 3,
           slidesToScroll: 1,
+          infinite: true,
         },
       },
     ],
