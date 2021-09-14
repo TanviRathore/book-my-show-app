@@ -17,8 +17,8 @@ const MoviePage = () => {
 
   useEffect(() => {
     const requestCast = async () => {
-      const getCast = await axios.get(`/movie/${id}/credits`);
-      setCast(getCast.data.cast);
+        const getCast = await axios.get(`/movie/${id}/credits`);
+        setCast(getCast.data.cast);
     };
 
     requestCast();
@@ -134,8 +134,8 @@ const MoviePage = () => {
           <h2 className="text-gray-800 font-bold md:text-2xl mb-3 text-xl ">
             Applicable Offers
           </h2>
-          <div className="flex flex-col gap-2 items-start lg:flex-row">
-            <div className="flex border-yellow-400 border-dashed border-2 rounded-md items-start gap-2 bg-yellow-100 p-3">
+          <div className="flex flex-col gap-3 md:gap-2 items-start lg:flex-row">
+            <div className="flex border-yellow-400 border-dashed border-2 rounded-md items-start gap-2 bg-yellow-100 p-1">
               <div className="w-8 h-8">
                 <FaCcVisa className="w-full h-full" />
               </div>
@@ -149,7 +149,7 @@ const MoviePage = () => {
                 </p>
               </div>
             </div>
-            <div className="flex item-start gap-2 bg-yellow-100 p-3 border-yellow-400 border-dashed border-2 rounded-md">
+            <div className="flex item-start gap-2 bg-yellow-100 p-1 border-yellow-400 border-dashed border-2 rounded-md">
               <div className="w-8 h-8">
                 <FaCcApplePay className="w-full h-full" />
               </div>
